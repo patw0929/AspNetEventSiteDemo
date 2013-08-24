@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="BM_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>後台管理系統</title>
+<link href="styles/layout.css" rel="stylesheet" type="text/css" />
+<link href="styles/wysiwyg.css" rel="stylesheet" type="text/css" />
+<!-- Theme Start -->
+<link href="themes/blue/styles.css" rel="stylesheet" type="text/css" />
+<!-- Theme End -->
+
+    <script type="text/javascript" src="http://dwpe.googlecode.com/svn/trunk/_shared/EnhanceJS/enhance.js"></script>	
+    <script type='text/javascript' src='http://dwpe.googlecode.com/svn/trunk/charting/js/excanvas.js'></script>
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js'></script>
+	<script type='text/javascript' src='scripts/jquery.wysiwyg.js'></script>
+    <script type='text/javascript' src='scripts/visualize.jQuery.js'></script>
+    <script type="text/javascript" src='scripts/functions.js'></script>
+    
+    <!--[if IE 6]>
+    <script type='text/javascript' src='scripts/png_fix.js'></script>
+    <script type='text/javascript'>
+      DD_belatedPNG.fix('img, .notifycount, .selected');
+    </script>
+    <![endif]--> 
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="homepage">
+    <form id="form1" runat="server">
+
+	<div id="header">
+    	<a href="" title=""><img src="img/logo.png" alt="後台管理系統" class="logo" /></a>
+    </div>
+
+    <asp:ContentPlaceHolder ID="cphBreadcrumb" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+    <!-- Right Side/Main Content Start -->
+    <div id="rightside">
+    <asp:ContentPlaceHolder id="cphContent" runat="server">x
+        
+    </asp:ContentPlaceHolder>
+    </div>
+    <!-- Right Side/Main Content End -->
+
+    <!-- Left Dark Bar Start -->
+    <div id="leftside">
+    	<div class="user">
+        	<img src="img/avatar.png" width="44" height="44" class="hoverimg" alt="Avatar" />
+            <p>歡迎使用!</p>
+            <p class="username">admin</p>
+            <p class="userbtn"><a href="Logout.aspx" title="">登出</a></p>
+        </div>
+        
+        <ul id="nav">
+            <li>
+                <a class="expanded heading">名單管理</a>
+                 <ul class="navigation">
+                    <li><a href="List.aspx" title="">列表</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="expanded heading">抽獎</a>
+                 <ul class="navigation">
+                    <li><a href="Draw.aspx" title="">抽獎</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- Left Dark Bar End --> 
+
+    </form>
+</body>
+</html>
